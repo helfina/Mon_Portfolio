@@ -1,0 +1,738 @@
+/*======================================================================================================================
+                                                            BODY
+
+             Bonne correction n pardon pour les fautes d'orthographe, et merci pour tous ,
+             t'es cours mon permis de consolider ce que j'ai pu apprendre c'est trois derniere années,
+             a bientot pour les cours de ux-ui design
+        ======================================================================================================================*/
+body {
+    background-color: black;
+    color: #EDEDED;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none; /*enleve le style par defaut des lien*/
+}
+
+a:hover {
+    border-radius: 10px;
+    background-color: #a20000;
+}
+
+h1, h2 {
+    text-transform: uppercase; /* transforme le texte en Majuscule*/
+    padding: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    width: 100%;
+    text-align: center;
+
+}
+
+h3, h4 {
+    text-transform: uppercase; /* transforme le texte en Majuscule*/
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+span, a {
+    font-style: italic;
+}
+
+/*======================================================================================================================
+                                                            HEADER
+        ======================================================================================================================*/
+header, header + #toggle:checked {
+    background-image: url("../images/laptoppng.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+}
+
+/*cache le menu  si la checkbox n'est pas checker*/
+ul {
+    display: none;
+}
+
+ul a {
+    color: white;
+}
+
+ul a:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+    background-color: #EDEDED;
+    color: black;
+    border-radius: 10px;
+}
+
+li {
+    padding: 10px;
+    color: white;
+}
+
+header label {
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    padding: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+
+/*si toggle est checked*/
+#toggle:checked + nav > ul {
+    display: flex;
+    color: white;
+    list-style: none;
+    flex-direction: column;
+    text-transform: uppercase; /* transforme le texte en Majuscule*/
+}
+
+/*======================================================================================================================
+                                                    MAIN
+======================================================================================================================*/
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+
+}
+
+/*======================================================================================================================
+                                                    SECTION
+======================================================================================================================*/
+section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#about, #cv, #portfolio {
+    background-color: rgb(237, 237, 237);
+    color: black;
+}
+
+/*======================================================================================================================
+                                                    SECTION #ABOUT
+======================================================================================================================*/
+#about {
+    justify-content: space-evenly;
+}
+
+#about figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    padding: 10px;
+}
+
+#about figure img {
+    width: 25%;
+    border: 3px solid black;
+    height: auto;
+    border-radius: 50%;
+}
+
+#about article {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about article h3,
+#about article p,
+#about article #boutons {
+    margin: 10px auto
+
+}
+
+#about h3 {
+    font-weight: 400;
+}
+
+#boutons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#boutons a#btnCv {
+    width: 100%;
+}
+
+#boutons a {
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #0a0a0b;
+    border-radius: 15px;
+    background-color: #090909;
+    color: white;
+}
+
+#boutons a:hover {
+    background-color: #EDEDED;
+    color: black;
+    border-radius: 10px;
+}
+
+#boutons svg {
+    width: 100%;
+}
+
+/*======================================================================================================================
+                                                    SECTION #SKILL
+======================================================================================================================*/
+#skill {
+    flex-wrap: wrap;
+}
+
+#skill article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 10px;
+}
+
+article#perso {
+    flex-direction: column;
+    align-items: center;
+}
+
+#skill aside h4,
+#skill aside p {
+    width: 50%;
+}
+
+.competence {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+.barre {
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.c95 {
+    width: 95%;
+    background-color: #a20000;
+}
+
+.c80 {
+    width: 80%;
+    background-color: #a20000;
+}
+
+.c75 {
+    width: 75%;
+    background-color: #a20000;
+}
+
+.c50 {
+    width: 50%;
+    background-color: #a20000;
+}
+
+.c25 {
+    width: 25%;
+    background-color: #a20000;
+}
+
+.c5 {
+    width: 5%;
+    background-color: #a20000;
+}
+
+/*======================================================================================================================
+                                                    SECTION #CV
+======================================================================================================================*/
+
+#cv {
+    background-color: rgb(237, 237, 237);
+    color: black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#cv div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 30px auto;
+}
+
+#cv h2,
+#cv article h3,
+#cv article p {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#cv a, #cv span {
+    width: 50%;
+}
+
+#cv div#formation a, #cv div#formation span {
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+}
+
+#cv a {
+    color: black;
+}
+
+#cv article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px auto;
+
+}
+
+#cv article p {
+    text-align: initial;
+}
+
+#cv article ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#cv article ul li {
+    padding: 5px 0;
+    width: 30%;
+    color: black;
+}
+
+#cv hr {
+    color: black;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/*======================================================================================================================
+                                                    SECTION #CERTIFICAT
+======================================================================================================================*/
+#certificat {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+div#slideCertificat .carousel-indicators {
+    background-color: black;
+    bottom: -2.5rem;
+}
+
+div#slideCertificat article.carousel-inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+div#slideCertificat .carousel-item img {
+    width: 100%;
+    margin: 0 auto;
+    border: 5px solid black;
+}
+
+div#slideCertificat .carousel-caption {
+    background-color: #00000094;
+}
+
+/*======================================================================================================================
+                                                    SECTION #PORTFOLIO
+======================================================================================================================*/
+#portfolio {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+section#portfolio #slidePortfolio {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section#portfolio #indicPortfolio {
+    bottom: -3rem;
+}
+
+section#portfolio #btnPortfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+section#portfolio #prevPotfolio, #nextPotfolio {
+    top: auto;
+    bottom: auto;
+    background-color: black;
+    border-radius: 20px;
+    width: 60px
+
+}
+
+section#portfolio button#prevPotfolio {
+    left: 41%;
+}
+
+section#portfolio button#nextPotfolio {
+    left: 55%;
+}
+
+section#portfolio div#slideCertificat article {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section#portfolio article {
+    margin: 30px auto;
+}
+
+section#portfolio article figure {
+    width: 100%;
+    position: relative;
+}
+
+section#portfolio figcaption.card-body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/*======================================================================================================================
+                                                    SECTION #CONTACT
+======================================================================================================================*/
+section#contact {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: rgb(237, 237, 237);
+    color: black;
+}
+
+#contact h2 {
+    margin: 10px auto;
+}
+
+form p {
+    margin: 5px auto;
+}
+
+label {
+    color: black;
+    margin: 10px;
+}
+
+form .form-control {
+    border: 1px solid black;
+}
+
+#contact div#map iframe {
+    border-radius: 35px;
+    border: 1px solid black;
+    width: 500px;
+    height: 300px;
+}
+
+/*======================================================================================================================
+                                                        FOOTER
+    ======================================================================================================================*/
+footer aside {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+footer aside p a {
+    color: white;
+    padding: 5px;
+}
+
+.cssValid {
+    border: 0;
+    width: 88px;
+    height: 31px
+}
+
+/*copyright*/
+
+.addSymbol:after {
+    content: ' \00a9';
+}
+
+/*======================================================================================================================
+                                                        MEDIAQUERIES
+    ======================================================================================================================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        color: black;
+    }
+
+    /*======================================================================================================================
+                                                        #skill &  #cv
+    ======================================================================================================================*/
+    section#skill, section#cv {
+        flex-direction: column;
+    }
+
+    /*======================================================================================================================
+                                                    #cv
+======================================================================================================================*/
+    #cv div {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #cv a, #cv span, #cv div#formation a, #cv div#formation span {
+        width: 100%;
+        text-align: center;
+        padding: 6px;
+    }
+
+    #cv article {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    h1 {
+        color: black;
+        font-size: 14px;
+        width: 70%;
+    }
+
+    header {
+        position: relative;
+
+    }
+
+    /*si toggle est checked*/
+    #toggle:checked,
+    #toggle:checked + nav {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+    }
+
+    /*======================================================================================================================
+                                                            SECTION #ABOUT
+        ======================================================================================================================*/
+    #about {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+    }
+
+    #about figure {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #about figure image {
+        width: 100%;
+    }
+
+    #about h2 {
+        width: 100%;
+    }
+
+    #about article {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #about article p {
+        text-align: center;
+    }
+
+    #about #boutons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about #boutons a {
+        width: 90%;
+    }
+
+    /*======================================================================================================================
+                                                      SECTION
+  ======================================================================================================================*/
+    #skill, #cv {
+        flex-direction: column;
+    }
+
+    /*======================================================================================================================
+                                                      SECTION #SKILL
+  ======================================================================================================================*/
+    #skill article {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    #skill article aside {
+        width: 100%;
+    }
+
+    #skill #perso {
+        display: none;
+    }
+
+    /*======================================================================================================================
+                                                        SECTION #CV
+    ======================================================================================================================*/
+    #cv div {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #cv a, #cv span, #cv div#formation a, #cv div#formation span {
+        width: 100%;
+        text-align: center;
+        padding: 6px;
+    }
+
+    #cv article {
+        margin: 20px auto;
+    }
+
+    /*======================================================================================================================
+                                                            SECTION #PORTFOLIO
+        ======================================================================================================================*/
+    #portfolio figure {
+        margin: 10px auto;
+    }
+
+    /*======================================================================================================================
+                                                               SECTION #CONTACT
+           ======================================================================================================================*/
+    form, #map {
+        width: 100%;
+    }
+
+    #contact div#map iframe {
+        width: 100%;
+    }
+
+    /*======================================================================================================================
+                                                            FOOTER
+        ======================================================================================================================*/
+    footer article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer article p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    /*======================================================================================================================
+                                                    HEADER
+======================================================================================================================*/
+    header .displayNone {
+        display: none;
+    }
+
+    /*======================================================================================================================
+                                                        #CV
+    ======================================================================================================================*/
+    #cv ul {
+        flex-direction: column;
+    }
+
+    #cv ul li {
+        width: 100%;
+    }
+
+    /*======================================================================================================================
+                                                    #CERTIFICAT & #PORTFOLIO
+======================================================================================================================*/
+    #certificat, #portfolio {
+        display: none;
+    }
+}
